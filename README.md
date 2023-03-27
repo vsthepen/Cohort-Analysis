@@ -2,7 +2,7 @@
 
 Cohort analysis is a form of behavioural analytics used to measure user engagement over time a.k.a. churn rate. Engagement is not the same as growth, you could be growing your customer base by acquiring new customers, but those customers are not sticking with you over time. So, cohort analysis helps you separate between engagement and growth.
 
-It is typically used in companies that engage customers and offer products and services via websites, apps, subscription model etc.
+It is frequently employed by businesses that interact with clients and provide goods and services through websites, apps, subscription models, etc.
 
 ## Business Problem
 
@@ -71,8 +71,10 @@ EOMONTH(<start_date>, <months>)
 A matrix was used to create a straightforward visual representation. The retention rate was highlighted using conditional formatting. A higher retention rate is indicated by a darker shade of blue in the format, whereas a lower retention rate is shown by a lighter shade of blue.
 In a cohort Table, the months on the left side of the matrix (column) are knows as the acquisition months, while the months at the top (rows) are known as the future months within a period.
 
+### Customer retention %
 ![Cohort - Customer retention %](https://user-images.githubusercontent.com/115559534/227920180-2357c2e6-b55d-404c-9c0f-a7f23dcd9b7e.png)
 
+### Customer Avg. Spend
 ![Cohort - Customer Avg. Spend](https://user-images.githubusercontent.com/115559534/227920468-f204fabb-6b0b-4ae7-b5f6-577d6bdc467f.png)
 
 Month 0, the first month of purchase, is at 100% because it is the first month that every member of that cohort made a purchase.
