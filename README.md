@@ -16,25 +16,37 @@ Data was collected in two different Excel worksheets. The order and sales inform
 
 -	Blank rows and unnecessary columns were eliminated, and each column was assigned the proper data type.
 
+![Column quality indicators confirming cleaned data](https://user-images.githubusercontent.com/115559534/227917324-ab061084-7a38-4581-abf7-7292107214b9.png)
+
 ## Data Analysis
 
 -	After cleaning, the tables were loaded into Power Bi.
 
 -	a *“one to many”* relationship was drawn between the customer and sales table.
 
+![Data Model showing relationship between tables](https://user-images.githubusercontent.com/115559534/227918182-f41ba991-3bf6-406d-961a-a59ff9f71e7a.png)
+
 -	Creation of Future Months Table: This is a table that has a list of months number to denote the months after the customer’s first purchase.
+
+•	The Future Months Table was created using the *“GENERATE SERIES”* DAX function in power BI.
+
+![DAX - Future Months Table](https://user-images.githubusercontent.com/115559534/227918611-3cb7c583-33a0-43fb-86df-a159fa18fb37.png)
 
 •	Month 0 - Initial purchase month
 
 •	Month 12 – Twelve months after the purchase.
 
-•	The Future Months Table was created using the *“GENERATE SERIES”* DAX function in power BI.
+![Future Months Table](https://user-images.githubusercontent.com/115559534/227919086-92dca551-585a-4fba-9872-4308f5b0aa94.png)
 
 -	Creation of Key Measures:
 
 •	**Customer retention** i.e., the number of customers retained each month after the initial month of purchase and the retention rate of the customers (%).
 
+![DAX - Customer retention %](https://user-images.githubusercontent.com/115559534/227919428-7b8b2469-9d8e-4377-a97f-05a819261f21.png)
+
 •	**Customer Avg. Spend** i.e., the average amount spent by new customers in the first month after acquisition, and throughout the following 12 months.
+
+![DAX - New Customer Avg. spend](https://user-images.githubusercontent.com/115559534/227919746-e07dea84-feb8-47f5-b0d0-38828692b1c1.png)
 
 -	Some of the variables created when building the DAX formulas include:
 
@@ -58,6 +70,10 @@ EOMONTH(<start_date>, <months>)
 
 A matrix was used to create a straightforward visual representation. The retention rate was highlighted using conditional formatting. A higher retention rate is indicated by a darker shade of blue in the format, whereas a lower retention rate is shown by a lighter shade of blue.
 In a cohort Table, the months on the left side of the matrix (column) are knows as the acquisition months, while the months at the top (rows) are known as the future months within a period.
+
+![Cohort - Customer retention %](https://user-images.githubusercontent.com/115559534/227920180-2357c2e6-b55d-404c-9c0f-a7f23dcd9b7e.png)
+
+![Cohort - Customer Avg. Spend](https://user-images.githubusercontent.com/115559534/227920468-f204fabb-6b0b-4ae7-b5f6-577d6bdc467f.png)
 
 Month 0, the first month of purchase, is at 100% because it is the first month that every member of that cohort made a purchase.
 
