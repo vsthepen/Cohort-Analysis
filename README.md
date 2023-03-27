@@ -20,7 +20,7 @@ Data was collected in two different Excel worksheets. The order and sales inform
 
 -	After cleaning, the tables were loaded into Power Bi.
 
--	a “one to many” relationship was drawn between the customer and sales table.
+-	a *“one to many”* relationship was drawn between the customer and sales table.
 
 -	Creation of Future Months Table: This is a table that has a list of months number to denote the months after the customer’s first purchase.
 
@@ -28,7 +28,7 @@ Data was collected in two different Excel worksheets. The order and sales inform
 
 •	Month 12 – Twelve months after the purchase.
 
-•	The Future Months Table was created using the “GENERATE SERIES” DAX function in power BI.
+•	The Future Months Table was created using the *“GENERATE SERIES”* DAX function in power BI.
 
 -	Creation of Key Measures:
 
@@ -50,11 +50,9 @@ Data was collected in two different Excel worksheets. The order and sales inform
 
 EOMONTH(<start_date>, <months>)
 
--In order to return the selected first order month and future months, I first generated two variables.
+-In order to return the selected first order month and future months, I first generated two variables. I calculated the number of distinct customers and filtered the result so that the end of month in the selected date equals end of month (start date is the (first order date), interval is the selected current month after). The DIVIDE function was then used to divide the number of customers kept each succeeding month/distinct count of new customers obtained from the first order date.
 
-I calculated the number of distinct customers and filtered the result so that the end of month in the selected date equals end of month (start date is the (first order date), interval is the selected current month after). The DIVIDE function was then used to divide the number of customers kept each succeeding month/distinct count of new customers obtained from the first order date.
-
--	With the addition of a new variable called FutureNewCustomers, the second measure called “Customer Avg. Spend” was developed using a methodology similar to that described previously.
+-With the addition of a new variable called FutureNewCustomers, the second measure called “Customer Avg. Spend” was developed using a methodology similar to that described previously.
 
 ## Data Visualization
 
