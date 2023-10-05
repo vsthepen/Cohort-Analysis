@@ -46,7 +46,7 @@ Data was collected in two different Excel worksheets. The order and sales inform
 
 •	**Avg. amount spent** i.e., the average amount spent by new customers in the first month of acquisition, and throughout the following 12 months.
 
-![DAX - New Customer Avg. spend](https://user-images.githubusercontent.com/115559534/227919746-e07dea84-feb8-47f5-b0d0-38828692b1c1.png)
+![image](https://github.com/vsthepen/Cohort-Analysis/assets/115559534/98b50998-cd75-4d4c-9e08-9efcb0b2f42a)
 
 -	Variables created when building the DAX formulas include:
 
@@ -84,7 +84,7 @@ Month 0, the first month of purchase, is at 100% because it is the first month t
 
 **Avg. amount spent**
 
-![Cohort - Customer Avg. Spend](https://user-images.githubusercontent.com/115559534/227920468-f204fabb-6b0b-4ae7-b5f6-577d6bdc467f.png)
+![image](https://github.com/vsthepen/Cohort-Analysis/assets/115559534/0f85ed87-654d-47c9-9612-8a460e81ff35)
 
 ## Insights
 
