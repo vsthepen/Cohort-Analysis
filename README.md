@@ -82,6 +82,8 @@ Month 0, the first month of purchase, is at 100% because it is the first month t
 
 ![Cohort - Customer retention %](https://user-images.githubusercontent.com/115559534/227920180-2357c2e6-b55d-404c-9c0f-a7f23dcd9b7e.png)
 
+![image](https://github.com/vsthepen/Cohort-Analysis/assets/115559534/d834f64f-b51e-4fea-8b99-f3f6bcbede77)
+
 **Avg. amount spent**
 
 ![image](https://github.com/vsthepen/Cohort-Analysis/assets/115559534/0f85ed87-654d-47c9-9612-8a460e81ff35)
