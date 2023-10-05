@@ -54,8 +54,6 @@ Data was collected in two different Excel worksheets. The order and sales inform
 
 •	*CurrentMonthAfter*: This represents how many months into the future you want to calculate.
 
-•	*FutureNewCustomers*: Identifies customers acquired in a particular month e.g., May 2014, that also bought in the following months e.g., June 2014, August 2014.
-
 ## Logic of the DAX formula used to create the “Customer Retention (%)” measure
 
 ## Variable Definitions:
@@ -64,23 +62,19 @@ Data was collected in two different Excel worksheets. The order and sales inform
   
 - VAR CurrentMonthAfter = SELECTEDVALUE('Future Months Table'[Value]): This variable finds the "Value" selected by the user in the 'Future Months Table.' It represents how many months after the first order you want to count customers.
 
-Main Calculation (RETURN)
+Main Calculation (RETURN) : This is where the actual calculation happens.
 
-- CALCULATE(): This function is used to modify the filter context for calculations. It allows you to calculate an expression in a specific context.
+- DIVIDE(): This function calculates the division of two numbers.
+  
+## CALCULATE() and DISTINCTCOUNT():
 
-- DISTINCTCOUNT(): This function counts the number of distinct (unique) values in a column. In this case, it counts the number of distinct customer IDs.
+CALCULATE(DISTINCTCOUNT(Sales[Customer ID]), ...): This part of the formula calculates the number of distinct (unique) customers who made purchases within a specific time frame.
 
-- FILTER(): This function is used to filter a table based on a condition.
+## FILTER() Function and EOMONTH() Function:
 
-## EOMONTH() Function:
+FILTER(Sales, EOMONTH(Sales[Order Date],0)=EOMONTH(FirstOrderMonth,CurrentMonthAfter)): This is a filter condition that selects customers who made purchases within the time frame defined by "FirstOrderMonth" (the first order month) and "CurrentMonthAfter" (the number of months into the future). Essentially, it filters the data to include only the customers who made purchases within this specified time frame.
 
-- EOMONTH(Sales[Order Date], 0) = EOMONTH(FirstOrderMonth, CurrentMonthAfter): This is the condition for filtering the Sales table. It checks if the "Order Date" in the Sales table falls within the time frame defined by "FirstOrderMonth" (the first order month) and "CurrentMonthAfter" (the number of months after the first order). Essentially, it filters the data to include only the customers who made purchases within this specified time frame.
-
-## Data Visualization
-
-A matrix was used to create a straightforward visual representation. The retention rate was highlighted using conditional formatting. A higher retention rate is indicated by a darker shade of green, while a lower retention rate is shown by a lighter shade of blue.
-
-In a cohort Table, the months on the left side of the matrix (column) are knows as the **acquisition months**, while the months at the top (rows) are known as the **future months** within a period.
+DISTINCTCOUNT(Sales[Customer ID]): This part counts the number of distinct customers in the Sales table. It tells us how many unique customers there are in total.
 
 **Customer retention %**
 
