@@ -56,25 +56,25 @@ Data was collected in two different Excel worksheets. The order and sales inform
 
 ## Logic of the DAX formula used to create the “Customer Retention (%)” measure
 
-## Variable Definitions:
+### Variable Definitions:
 
 - VAR FirstOrderMonth = SELECTEDVALUE(Sales[First Order Month]): This variable finds the "First Order Month" selected by the user in the Sales table. It represents the month when a customer made their first purchase.
   
 - VAR CurrentMonthAfter = SELECTEDVALUE('Future Months Table'[Value]): This variable finds the "Value" selected by the user in the 'Future Months Table.' It represents how many months after the first order you want to count customers.
 
-Main Calculation (RETURN) : This is where the actual calculation happens.
+### Main Calculation (RETURN) : This is where the actual calculation happens.
 
 - DIVIDE(): This function calculates the division of two numbers.
   
-## CALCULATE() and DISTINCTCOUNT():
+- CALCULATE() and DISTINCTCOUNT():
 
 CALCULATE(DISTINCTCOUNT(Sales[Customer ID]), ...): This part of the formula calculates the number of distinct (unique) customers who made purchases within a specific time frame.
 
-## FILTER() Function and EOMONTH() Function:
+- FILTER() Function and EOMONTH() Function:
 
 FILTER(Sales, EOMONTH(Sales[Order Date],0)=EOMONTH(FirstOrderMonth,CurrentMonthAfter)): This is a filter condition that selects customers who made purchases within the time frame defined by "FirstOrderMonth" (the first order month) and "CurrentMonthAfter" (the number of months into the future). Essentially, it filters the data to include only the customers who made purchases within this specified time frame.
 
-DISTINCTCOUNT(Sales[Customer ID]): This part counts the number of distinct customers in the Sales table. It tells us how many unique customers there are in total.
+- DISTINCTCOUNT(Sales[Customer ID]): This part counts the number of distinct customers in the Sales table. It tells us how many unique customers there are in total.
 
 **Customer retention %**
 
