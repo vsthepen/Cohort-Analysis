@@ -52,32 +52,45 @@ Data was collected in two different Excel worksheets. The order and sales inform
 
 •	*FirstOrderMonth*: This is the earliest date a purchase was made by a customer.
 
-•	*CurrentMonthAfter*: This indicates the following months after the first order month.
+•	*CurrentMonthAfter*: This represents how many months into the future you want to calculate.
 
 •	*FutureNewCustomers*: Identifies customers acquired in a particular month e.g., May 2014, that also bought in the following months e.g., June 2014, August 2014.
 
-## Logic of the DAX formula used in creation of the “Customer Retention (%)” measure
+## Logic of the DAX formula used to create the “Customer Retention (%)” measure
 
--Before I proceed, kindly note that the EOMONTH function takes in two parameters, the start date in DateTime format, or in an accepted text representation of a date, and the months, a number representing the number of months before or after the start_date.
+## Variable Definitions:
 
-EOMONTH(<start_date>, <months>)
+- VAR FirstOrderMonth = SELECTEDVALUE(Sales[First Order Month]): This variable finds the "First Order Month" selected by the user in the Sales table. It represents the month when a customer made their first purchase.
+  
+- VAR CurrentMonthAfter = SELECTEDVALUE('Future Months Table'[Value]): This variable finds the "Value" selected by the user in the 'Future Months Table.' It represents how many months after the first order you want to count customers.
 
--In order to return the selected first order month and future months, I first generated two variables. I calculated the number of distinct customers and filtered the result so that the end of month in the selected date equals end of month (start date is the (first order date), interval is the selected current month after). The DIVIDE function was then used to divide the number of customers kept each succeeding month/distinct count of new customers obtained from the first order date.
+Main Calculation (RETURN)
 
--With the addition of a new variable called FutureNewCustomers, the second measure called “Customer Avg. Spend” was developed using a methodology similar to that described previously.
+- CALCULATE(): This function is used to modify the filter context for calculations. It allows you to calculate an expression in a specific context.
+
+- DISTINCTCOUNT(): This function counts the number of distinct (unique) values in a column. In this case, it counts the number of distinct customer IDs.
+
+- FILTER(): This function is used to filter a table based on a condition.
+
+## EOMONTH() Function:
+
+- EOMONTH(Sales[Order Date], 0) = EOMONTH(FirstOrderMonth, CurrentMonthAfter): This is the condition for filtering the Sales table. It checks if the "Order Date" in the Sales table falls within the time frame defined by "FirstOrderMonth" (the first order month) and "CurrentMonthAfter" (the number of months after the first order). Essentially, it filters the data to include only the customers who made purchases within this specified time frame.
 
 ## Data Visualization
 
-A matrix was used to create a straightforward visual representation. The retention rate was highlighted using conditional formatting. A higher retention rate is indicated by a darker shade of blue in the format, whereas a lower retention rate is shown by a lighter shade of blue.
-In a cohort Table, the months on the left side of the matrix (column) are knows as the acquisition months, while the months at the top (rows) are known as the future months within a period.
+A matrix was used to create a straightforward visual representation. The retention rate was highlighted using conditional formatting. A higher retention rate is indicated by a darker shade of green, while a lower retention rate is shown by a lighter shade of blue.
+
+In a cohort Table, the months on the left side of the matrix (column) are knows as the **acquisition months**, while the months at the top (rows) are known as the **future months** within a period.
 
 **Customer retention %**
+
+Month 0, the first month of purchase, is at 100% because it is the first month that every member of that cohort made a purchase.
+
 ![Cohort - Customer retention %](https://user-images.githubusercontent.com/115559534/227920180-2357c2e6-b55d-404c-9c0f-a7f23dcd9b7e.png)
 
 **Customer Avg. Spend**
-![Cohort - Customer Avg. Spend](https://user-images.githubusercontent.com/115559534/227920468-f204fabb-6b0b-4ae7-b5f6-577d6bdc467f.png)
 
-Month 0, the first month of purchase, is at 100% because it is the first month that every member of that cohort made a purchase.
+![Cohort - Customer Avg. Spend](https://user-images.githubusercontent.com/115559534/227920468-f204fabb-6b0b-4ae7-b5f6-577d6bdc467f.png)
 
 ## Insights
 
