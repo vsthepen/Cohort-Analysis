@@ -88,12 +88,15 @@ Month 0, the first month of purchase, is at 100% because it is the first month t
 
 ## Insights
 
--	In general, the company's customer retention rate during the first five months is much lower than it is between six and twelve months.
--	It was observed that, up to six months after purchase, the average spend significantly decreases.
--	Over a three-year period (2014-2016), the average amount spent by new customers in the month of initial purchase lingered in-between $436 – $497.
+- The months of **March, September & November** are the company’s **highest** months for gaining new customers.
 
-## Recommendations
+- The months of **January and February** are the company's **lowest** months for gaining new customers.
 
--	Better marketing campaigns must be developed by the company with a focus on newly acquired customers. Once the customer is on board, the campaign should run for the first three to five months.
--	The new customer should have enough time during this phase (3-5 months) to interact with the product/service offerings and ultimately convert to a sold-and-retained customer.
--	We should check to see if items bought by first-time customers are constantly in stock and occasionally offer discounts on those items.
+- Retention rates generally decline dramatically in the first six months following a user's initial order, but they appear to rise in the second half of the year.
+
+- Since 2014, there has been a significant decline in the number of users acquired in the first month, and this decline seems to be continuous.
+
+- In the year 2016, May had the highest average amount spent by users in the first order month despite acquiring only a few new users.
+
+- The company’s products & services is most successful in attracting new users from the **East & West** regions.
+
