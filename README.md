@@ -44,11 +44,11 @@ Data was collected in two different Excel worksheets. The order and sales inform
 
 ![DAX - Customer retention %](https://user-images.githubusercontent.com/115559534/227919428-7b8b2469-9d8e-4377-a97f-05a819261f21.png)
 
-•	**Customer Avg. Spend** i.e., the average amount spent by new customers in the first month after acquisition, and throughout the following 12 months.
+•	**Avg. amount spent** i.e., the average amount spent by new customers in the first month of acquisition, and throughout the following 12 months.
 
 ![DAX - New Customer Avg. spend](https://user-images.githubusercontent.com/115559534/227919746-e07dea84-feb8-47f5-b0d0-38828692b1c1.png)
 
--	Some of the variables created when building the DAX formulas include:
+-	Variables created when building the DAX formulas include:
 
 •	*FirstOrderMonth*: This is the earliest date a purchase was made by a customer.
 
@@ -82,7 +82,7 @@ Month 0, the first month of purchase, is at 100% because it is the first month t
 
 ![Cohort - Customer retention %](https://user-images.githubusercontent.com/115559534/227920180-2357c2e6-b55d-404c-9c0f-a7f23dcd9b7e.png)
 
-**Customer Avg. Spend**
+**Avg. amount spent**
 
 ![Cohort - Customer Avg. Spend](https://user-images.githubusercontent.com/115559534/227920468-f204fabb-6b0b-4ae7-b5f6-577d6bdc467f.png)
 
