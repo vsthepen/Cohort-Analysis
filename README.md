@@ -114,4 +114,6 @@ Month 0, the first month of purchase, is at 100% because it is the first month t
 
 - Given that the company's products and services are most successful in attracting new users from the East and West regions, we should consider focusing our marketing efforts and expansion plans on these regions by tailoring our messaging and promotions to cater to the preferences and needs of customers in these areas.
 
+- Finally, to better understand the reasons behind retention fluctuations and customer acquisition declines, we should consider gathering feedback from customers through surveys or direct communication. This can provide valuable insights into what drives customer behavior and how to improve our offerings.
+
 
