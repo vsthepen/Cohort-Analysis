@@ -102,3 +102,14 @@ Month 0, the first month of purchase, is at 100% because it is the first month t
 
 - The company’s products & services is most successful in attracting new users from the **East & West** regions.
 
+## Recommendations
+
+- In high-acquisition months like **March, September, and November**, we should consider increasing marketing efforts to maximize customer acquisition. e.g, utilizing special promotions, discounts, or advertising to leverage customer acquisition. In low months like January and February, we should focus on customer retention and engagement strategies rather than heavy acquisition efforts. This might include offering incentives to existing customers to refer new ones.
+
+- Given the significant decline in retention rates during the first six months after initial subscription, the company should prioritize efforts to improve the customer experience during this period. This may involve better onboarding, providing valuable content, and addressing pain points customers face in the early stages of their subscription.
+
+- As retention rates appear to rise in the second half of the year, we have to take advantage of this trend. We should consider running customer appreciation campaigns, loyalty programs, or exclusive content releases to keep customers engaged and subscribed during this time.
+
+- We should further investigate the reasons behind the continuous decline in the number of users acquired in the first month. e.g if there are changes in market dynamics or with competitors. We can also adjust marketing and product strategies to counter this trend; This may involve exploring new customer acquisition channels or refining the company's value proposition.
+
+
