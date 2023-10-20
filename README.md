@@ -112,4 +112,6 @@ Month 0, the first month of purchase, is at 100% because it is the first month t
 
 - We should further investigate the reasons behind the continuous decline in the number of users acquired in the first month. e.g if there are changes in market dynamics or with competitors. We can also adjust marketing and product strategies to counter this trend; This may involve exploring new customer acquisition channels or refining the company's value proposition.
 
+- Given that the company's products and services are most successful in attracting new users from the East and West regions, we should consider focusing our marketing efforts and expansion plans on these regions by tailoring our messaging and promotions to cater to the preferences and needs of customers in these areas.
+
 
